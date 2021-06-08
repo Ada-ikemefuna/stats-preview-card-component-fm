@@ -1,0 +1,168 @@
+:root {
+  --primary-100: hsl(233, 47%, 7%);
+  --primary-200: hsl(244, 38%, 16%);
+  --primary: hsl(277, 64%, 61%);
+  --white-900: hsl(0, 0%, 100%);
+  --white-800: hsla(0, 0%, 100%, 0.75);
+  --white-700: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: var(--white-800);
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background: var(--primary-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  max-width: 480px;
+  margin: 0 1.5em;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+article {
+  margin: 2.75em 2em 1em 2em;
+  text-align: center;
+}
+
+p {
+  line-height: 1.75em;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.stats {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin: 2em 0;
+  width: 100%;
+}
+
+/* HEADLINES */
+h1 {
+  color: var(--white-900);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+h1 > * {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--white-900);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* IMAGE */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-src {
+  content: url("../images/image-header-mobile.jpg");
+}
+
+.bg-primary {
+  background: var(--primary);
+}
+.bg-primary-200 {
+  background: var(--primary-200);
+}
+
+.img-mono {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100);
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+}
+
+/* TEXT */
+.text-highlight {
+  color: var(--primary);
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.heading {
+  color: var(--white-700);
+}
+.text-center {
+  text-align: center;
+}
+
+@media (min-width: 1120px) {
+  section {
+    max-width: 1110px;
+    display: grid;
+    grid-template-columns: 1fr 540px;
+  }
+
+  .stats {
+    justify-content: start;
+    display: flex;
+    flex-direction: row;
+    gap: 3.5em;
+    margin: 0;
+    width: 100%;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 4.5em 8em 4.5em 4em;
+    text-align: start;
+  }
+
+  /* IMAGE */
+  img {
+    display: block;
+    width: 540px;
+    height: 446px;
+  }
+
+  .img-src {
+    content: url("../images/image-header-desktop.jpg");
+  }
+
+  /* HEADLINES */
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.4em;
+  }
+  h1 > * {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.4em;
+  }
+
+  h2 {
+    color: var(--white-900);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
